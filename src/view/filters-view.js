@@ -1,6 +1,12 @@
 import AbstractView from './abstract-view.js';
 
 export default class FiltersView extends AbstractView {
+  constructor() {
+    super();
+    this._callback = {};
+    this._handleFilterChange = this._handleFilterChange.bind(this);
+  }
+
   getTemplate() {
     return `
       <form class="trip-filters" action="#" method="get">
@@ -23,5 +29,17 @@ export default class FiltersView extends AbstractView {
         <button class="visually-hidden" type="submit">Accept filter</button>
       </form>
     `;
+  }
+
+  _handleFilterChange(evt) {
+    if (evt.target.tagName !== 'INPUT') {
+      return;
+    }
+    this._callback.filterChange(evt.target.value);
+  }
+
+  setFilterChangeHandler(callback) {
+    this._callback.filterChange = callback;
+    this.getElement().addEventListener('change', this._handleFilterChange);
   }
 }

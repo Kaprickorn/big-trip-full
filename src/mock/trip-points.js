@@ -8,7 +8,7 @@ export const tripPoints = [
     dateTo: '2024-05-18T12:30:00',
     basePrice: 150,
     isFavorite: true,
-    offers: ['meal', 'luggage']
+    offers: ['flight-luggage', 'flight-wifi']
   },
   {
     id: '2',
@@ -19,7 +19,7 @@ export const tripPoints = [
     dateTo: '2024-05-19T11:00:00',
     basePrice: 80,
     isFavorite: false,
-    offers: ['music']
+    offers: ['drive-gps']
   },
   {
     id: '3',
@@ -30,7 +30,7 @@ export const tripPoints = [
     dateTo: '2024-05-21T11:00:00',
     basePrice: 200,
     isFavorite: false,
-    offers: []
+    offers: ['checkin-breakfast']
   },
   {
     id: '4',
@@ -41,6 +41,6 @@ export const tripPoints = [
     dateTo: '2024-05-22T14:30:00',
     basePrice: 120,
     isFavorite: true,
-    offers: ['breakfast', 'wifi']
+    offers: ['train-business', 'train-meal']
   }
 ];
